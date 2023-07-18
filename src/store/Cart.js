@@ -11,11 +11,9 @@ const Cart = (props) => {
     }, [items])
 
     const onTotalChange = () => {
-        console.log('totals', items)
         let totals = 0;
         items.forEach(element => {
             totals = totals + (element.price * element.quantity)
-            console.log(totals)
         })
         setTotal(totals)
     }
@@ -79,7 +77,6 @@ const Cart = (props) => {
             }
         })
         setItems([...items])
-        // onTotalChange();
     } 
 
     const cartContext = {
